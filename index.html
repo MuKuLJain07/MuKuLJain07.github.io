@@ -1,49 +1,758 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="hero">
-        <h1>Hi, I'm a Web Developer</h1>
-        <p>Bridging the gap between UI/UX design, full-stack development, and DevOps.</p>
-    </header>
 
-    <main class="container">
-        <section class="projects">
-            <h2>Featured Projects</h2>
-            
-            <div class="project-card">
-                <h3>TradeMetrics</h3>
-                <p>A comprehensive tradelogging software featuring secure user transactions, intuitive data visualization, and seamless cloud deployment.</p>
-                <div class="tags">
-                    <span>MERN Stack</span>
-                    <span>AWS</span>
-                    <span>Razorpay</span>
-                </div>
-                <a href="#" class="link">View Live Demo →</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Project Two</h3>
-                <p>A brief description of another web application or tool you have built.</p>
-                <div class="tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-                <a href="#" class="link">View Source →</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <h2>Let's Work Together</h2>
-        <p>Currently open for new opportunities.</p>
-        <a href="mailto:your.email@example.com" class="btn">Get In Touch</a>
-    </footer>
-</body>
-</html>
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "surface-container": "#122131",
+        "secondary-container": "#00a572",
+        "tertiary": "#c7d8f2",
+        "on-background": "#f1f5f9",
+        "error-container": "#93000a",
+        "primary-fixed-dim": "#45dfa4",
+        "surface-dim": "#051424",
+        "on-error": "#690005",
+        "primary-fixed": "#68fcbf",
+        "on-primary-fixed": "#002114",
+        "on-secondary-container": "#00311f",
+        "secondary-fixed-dim": "#4edea3",
+        "surface-tint": "#34d399",
+        "on-secondary": "#022c22",
+        "error": "#ffb4ab",
+        "tertiary-container": "#acbcd6",
+        "primary": "#34d399",
+        "surface-variant": "#1c2b3c",
+        "on-tertiary-fixed-variant": "#38485d",
+        "on-secondary-fixed": "#002113",
+        "background": "#0b111a",
+        "secondary-fixed": "#6ffbbe",
+        "surface": "#0c121c",
+        "tertiary-fixed": "#d3e4fe",
+        "on-primary": "#022c22",
+        "inverse-on-surface": "#233143",
+        "outline-variant": "#233044",
+        "on-primary-fixed-variant": "#005137",
+        "secondary": "#2dd4bf",
+        "inverse-surface": "#d4e4fa",
+        "on-surface": "#f1f5f9",
+        "on-tertiary": "#213145",
+        "tertiary-fixed-dim": "#b7c8e1",
+        "on-tertiary-container": "#3c4c61",
+        "surface-container-highest": "#1e2c3d",
+        "on-tertiary-fixed": "#0b1c30",
+        "on-secondary-fixed-variant": "#005236",
+        "outline": "#475569",
+        "on-error-container": "#ffdad6",
+        "surface-container-high": "#162332",
+        "surface-container-lowest": "#060a10",
+        "on-surface-variant": "#94a3b8",
+        "on-primary-container": "#022c22",
+        "surface-bright": "#2c3a4c",
+        "surface-container-low": "#0f1722",
+        "inverse-primary": "#006c4b",
+        "primary-container": "#10b981"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "margin-desktop": "1.5rem",
+        "gutter-desktop": "1rem",
+        "margin": "1.25rem",
+        "gutter": "1rem",
+        "space-xs": "0.25rem",
+        "space-sm": "0.5rem",
+        "space-md": "0.75rem",
+        "space-lg": "1.25rem",
+        "space-xl": "2rem"
+      },
+      "fontFamily": {
+        "display": ["Geist", "system-ui", "sans-serif"],
+        "headline-lg": ["Geist", "system-ui", "sans-serif"],
+        "headline-md": ["Geist", "system-ui", "sans-serif"],
+        "headline-sm": ["Geist", "system-ui", "sans-serif"],
+        "body-lg": ["Geist", "system-ui", "sans-serif"],
+        "body-md": ["Geist", "system-ui", "sans-serif"],
+        "body-sm": ["Geist", "system-ui", "sans-serif"],
+        "mono-metric-lg": ["JetBrains Mono", "monospace"],
+        "mono-metric-md": ["JetBrains Mono", "monospace"],
+        "mono-label": ["JetBrains Mono", "monospace"]
+      },
+      "fontSize": {
+        "display": ["2.5rem", { "lineHeight": "3rem", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+        "headline-lg": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+        "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "500" }],
+        "headline-sm": ["1rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+        "body-lg": ["1rem", { "lineHeight": "1.625rem", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+        "body-md": ["0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "0em", "fontWeight": "400" }],
+        "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "letterSpacing": "0.005em", "fontWeight": "400" }],
+        "mono-metric-lg": ["1.75rem", { "lineHeight": "2rem", "letterSpacing": "-0.025em", "fontWeight": "600" }],
+        "mono-metric-md": ["1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+        "mono-label": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "500" }]
+      }
+    }
+  }
+};</script></head><body class="bg-[#0b111a] font-body-md text-[#f1f5f9] antialiased selection:bg-emerald-500/20 selection:text-emerald-300"><header class="fixed top-0 left-0 right-0 z-50 bg-[#0c121c]/80 backdrop-blur-xl border-b border-white/[0.07]"><div class="h-16 w-full px-margin-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><img alt="MJ Terminal Monogram" class="h-8 w-auto object-contain opacity-90" src="https://lh3.googleusercontent.com/aida/AEtjO1XwUkPritLEgy6LGDqDT7g825GkJY6TzT8hy-Um4zFHkVkUCWCm-SA2D9YOLk4GSClboq10-cjDrvxgF40zAlKL42kYubzZ9_FhxSz71j_xZILVsrTCtET0xutk47I0KXty0dRUe7BI_2zrOAeD2QL4lyM1TNFYcDCz2jnH_fN2ilgCdBh2m8gJh10ZSl6-PE1LtWt66t9w1F9y4YvapZcTZP-bsbXvTQiZxaAy9Rh9uFan_i4LsFckdR9V"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-[#f1f5f9] tracking-tight font-semibold">Mukul Jain</span><span class="font-mono-label text-mono-label text-slate-400 uppercase tracking-wider">Cloud &amp; DevOps Platform</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-[#111925] border border-white/[0.06] ml-space-xs"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span></span><span class="font-body-sm text-body-sm text-emerald-400/90 font-medium">Available for Full-Time &amp; SRE Roles</span></div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="text-[#f1f5f9] bg-[#162130] font-medium rounded-lg"><a aria-current="page" class="px-space-md py-space-xs transition-colors text-[#f1f5f9] bg-[#162130] border border-white/[0.06] font-medium rounded-lg" data-path="about" href="#">About</a><a class="px-space-md py-space-xs text-slate-400 font-body-md text-body-md hover:text-[#f1f5f9] hover:bg-[#162130]/60 transition-colors rounded-lg" data-path="impact-metrics" href="#impact-metrics">Impact</a><a class="px-space-md py-space-xs text-slate-400 font-body-md text-body-md hover:text-[#f1f5f9] hover:bg-[#162130]/60 transition-colors rounded-lg" data-path="experience" href="#experience">Experience</a><a class="px-space-md py-space-xs text-slate-400 font-body-md text-body-md hover:text-[#f1f5f9] hover:bg-[#162130]/60 transition-colors rounded-lg" data-path="projects" href="#projects">Projects</a><a class="px-space-md py-space-xs text-slate-400 font-body-md text-body-md hover:text-[#f1f5f9] hover:bg-[#162130]/60 transition-colors rounded-lg" data-path="tech-stack" href="#tech-stack">Skills</a><a class="px-space-md py-space-xs text-slate-400 font-body-md text-body-md hover:text-[#f1f5f9] hover:bg-[#162130]/60 transition-colors rounded-lg" data-path="contact" href="#contact">Contact</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg border border-white/[0.08] bg-[#111925] font-body-md text-body-md text-slate-200 hover:bg-[#182334] hover:text-[#f1f5f9] transition-colors" href="#"><span class="material-symbols-outlined text-[16px] text-slate-400">download</span><span>Resume</span></a><a class="inline-flex items-center justify-center px-space-md py-2 rounded-lg bg-emerald-500/90 text-emerald-950 font-body-md text-body-md font-semibold hover:bg-emerald-400 transition-colors shadow-sm" href="#contact"><span>Get in Touch</span></a><div class="w-8 h-8 rounded-full bg-[#182334] border border-white/[0.08] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-emerald-400 text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-[#0b111a] min-h-screen"><div class="flex flex-col w-full text-[#f1f5f9]">
+<!-- Top Ambient Glow Accents (Calm & Understated) -->
+<div class="relative w-full overflow-hidden pointer-events-none">
+<div class="absolute -top-36 left-1/4 w-96 h-96 bg-emerald-500/[0.04] rounded-full blur-3xl"></div>
+<div class="absolute -top-24 right-1/4 w-[32rem] h-[32rem] bg-slate-700/[0.08] rounded-full blur-3xl"></div>
+</div>
+<!-- ========================================== -->
+<!-- 00 // HERO SECTION & LIVE TELEMETRY HUD   -->
+<!-- ========================================== -->
+<section class="w-full px-margin-desktop py-space-xl max-w-7xl mx-auto flex flex-col gap-space-xl"><!-- Top Recruiter Signal Pill -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-[#111925] border border-emerald-500/20 shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+</span>
+<span class="font-body-sm text-body-sm text-emerald-300 font-semibold tracking-wide">Actively Interviewing</span>
+</div>
+<span class="font-body-sm text-body-sm text-slate-400 flex items-center gap-1.5">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400/80"></span>
+    Open to Platform Engineering, DevOps &amp; Site Reliability Roles (Remote / Hybrid / On-site)
+  </span>
+</div>
+<!-- Main Typography & Executive Recruiter Card -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="flex flex-col">
+<span class="font-mono-label text-mono-label text-emerald-400/90 font-semibold uppercase tracking-widest mb-space-xs">Executive Engineering Profile</span>
+<h1 class="font-display text-display text-[#f1f5f9] tracking-tight leading-tight">
+        Mukul Jain
+      </h1>
+<p class="font-headline-lg text-headline-lg text-emerald-400 font-medium tracking-tight mt-1">
+        Cloud Platform &amp; DevOps Engineer
+      </p>
+</div>
+<p class="font-body-lg text-body-lg text-slate-300 max-w-2xl leading-relaxed">
+      Building reliable, scalable cloud infrastructure and high-velocity developer platforms. Helping fast-growing engineering teams ship faster, optimize cloud spend, and maintain resilient 99.99% system uptime.
+    </p>
+<!-- Primary Action Cluster -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-emerald-500/90 text-emerald-950 font-body-md text-body-md font-semibold hover:bg-emerald-400 transition-all shadow-sm" href="#contact">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+<span>Get in Touch</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-[#141d2b] border border-white/[0.08] hover:border-emerald-500/40 text-slate-200 hover:text-white font-body-md text-body-md transition-all" href="#experience">
+<span class="material-symbols-outlined text-[18px] text-emerald-400">work_history</span>
+<span>View Work Experience</span>
+</a>
+<div class="flex items-center gap-space-xs ml-0 sm:ml-space-xs">
+<a class="w-10 h-10 rounded-lg bg-[#111925] border border-white/[0.07] hover:border-slate-500 flex items-center justify-center text-slate-400 hover:text-slate-200 transition-colors" href="https://github.com" rel="noopener" target="_blank" title="GitHub">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-lg bg-[#111925] border border-white/[0.07] hover:border-slate-500 flex items-center justify-center text-slate-400 hover:text-slate-200 transition-colors" href="https://linkedin.com" rel="noopener" target="_blank" title="LinkedIn">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<!-- Executive At-a-Glance Recruiter Card -->
+<div class="lg:col-span-5 w-full">
+<div class="rounded-lg bg-[#101724] border border-white/[0.08] shadow-lg p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-white/[0.06]">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-emerald-400 text-[20px]">badge</span>
+<h3 class="font-headline-sm text-headline-sm text-[#f1f5f9] font-semibold">Candidate at a Glance</h3>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 font-mono-label text-mono-label font-medium">Verified Track Record</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-sm rounded bg-[#141e2e] border border-white/[0.05] flex flex-col gap-0.5">
+<span class="font-mono-label text-[10px] text-slate-400 uppercase tracking-wider">Current Role</span>
+<span class="font-headline-sm text-headline-sm text-[#f1f5f9] font-medium">DevOps Engineer at Dotpe</span>
+<span class="text-body-sm text-slate-400">Scaling cloud infrastructure across tier-1 fintech microservices</span>
+</div>
+<div class="p-space-sm rounded bg-[#141e2e] border border-white/[0.05] flex flex-col gap-0.5">
+<span class="font-mono-label text-[10px] text-slate-400 uppercase tracking-wider">Core Focus</span>
+<span class="font-body-md text-body-md text-emerald-300 font-medium">AWS Cloud · Kubernetes · GitOps &amp; CI/CD · AI Observability</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="p-2 rounded bg-[#141e2e] border border-white/[0.05] text-center">
+<span class="font-headline-sm text-headline-sm text-emerald-300 font-bold block">$7k+</span>
+<span class="text-[10px] text-slate-400 leading-tight block mt-0.5">Annual Savings</span>
+</div>
+<div class="p-2 rounded bg-[#141e2e] border border-white/[0.05] text-center">
+<span class="font-headline-sm text-headline-sm text-emerald-300 font-bold block">30k+</span>
+<span class="text-[10px] text-slate-400 leading-tight block mt-0.5">Domains Scaled</span>
+</div>
+<div class="p-2 rounded bg-[#141e2e] border border-white/[0.05] text-center">
+<span class="font-headline-sm text-headline-sm text-emerald-300 font-bold block">99.99%</span>
+<span class="text-[10px] text-slate-400 leading-tight block mt-0.5">Production Uptime</span>
+</div>
+</div>
+<div class="p-space-sm rounded bg-[#141e2e] border border-white/[0.05] flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-1.5 text-slate-400">
+<span class="material-symbols-outlined text-[16px] text-emerald-400">verified</span>
+<span>AWS &amp; Meta Certified Specialist</span>
+</div>
+<span class="text-emerald-300 font-medium">Dual Credentials</span>
+</div>
+</div>
+</div>
+</div>
+</div></section>
+<!-- ========================================== -->
+<!-- 01 // KEY METRICS & PRODUCTION IMPACT      -->
+<!-- ========================================== -->
+<section class="w-full px-margin-desktop py-space-xl max-w-7xl mx-auto flex flex-col gap-space-lg" id="impact-metrics"><div class="flex flex-col md:flex-row md:items-end justify-between border-b border-white/[0.07] pb-space-sm gap-space-xs">
+<div>
+<span class="font-mono-label text-mono-label text-emerald-400/90 font-semibold tracking-widest uppercase">01 // BUSINESS IMPACT &amp; KEY ACHIEVEMENTS</span>
+<h2 class="font-headline-lg text-headline-lg text-[#f1f5f9] tracking-tight font-semibold mt-1">
+      Proven Engineering Results in Production
+    </h2>
+</div>
+<p class="font-body-md text-body-md text-slate-400 max-w-md text-right md:text-left">
+    Direct metrics demonstrating cost optimization, high availability, and operational velocity.
+  </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop">
+<!-- Card 1: Cloud Cost Optimization -->
+<div class="lg:col-span-7 rounded-lg bg-[#111925] p-space-lg border border-white/[0.07] hover:border-emerald-500/30 transition-all flex flex-col justify-between group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-mono-label text-mono-label text-slate-400 uppercase tracking-wider">CLOUD COST OPTIMIZATION</span>
+<span class="px-space-xs py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 font-body-sm text-body-sm font-medium">Direct ROI</span>
+</div>
+<div class="flex items-baseline gap-space-sm my-1">
+<span class="font-headline-lg text-headline-lg text-emerald-300 font-bold tracking-tight">$7,000+ Saved Annually</span>
+</div>
+<p class="font-body-md text-body-md text-slate-300 leading-relaxed">
+        Architected an asynchronous Kafka event buffering layer that compressed high-frequency continuous writes into batched Parquet files, slashing expensive cloud API requests by 99.9% while increasing system fault-tolerance.
+      </p>
+<div class="p-space-sm rounded bg-[#0d141e] border border-white/[0.05] flex items-center justify-between text-body-sm mt-2">
+<span class="text-slate-400">S3 API Operations Reduced</span>
+<span class="text-emerald-300 font-medium">From 14M/month → 14k/month</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-space-md pt-space-sm border-t border-white/[0.06]">
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Cost Architecture</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">AWS S3</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Kafka Streaming</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Go Microservices</span>
+</div>
+</div>
+<!-- Card 2: Infrastructure Scale -->
+<div class="lg:col-span-5 rounded-lg bg-[#111925] p-space-lg border border-white/[0.07] hover:border-emerald-500/30 transition-all flex flex-col justify-between group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-mono-label text-mono-label text-slate-400 uppercase tracking-wider">INFRASTRUCTURE MODERNIZATION</span>
+<span class="px-space-xs py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 font-body-sm text-body-sm font-medium">-52% Server Memory</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-1">
+<span class="font-headline-lg text-headline-lg text-emerald-300 font-bold tracking-tight">30,000+ Domains Scaled</span>
+</div>
+<p class="font-body-md text-body-md text-slate-300 leading-relaxed">
+        Migrated high-traffic multi-tenant client storefronts to modern Caddy v2 reverse proxies with dynamic Redis TLS cert automation, delivering zero-downtime certificate renewal and 52% reduction in memory footprint.
+      </p>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-space-md pt-space-sm border-t border-white/[0.06]">
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Caddy v2</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Kubernetes Ingress</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Automated TLS</span>
+</div>
+</div>
+<!-- Card 3: Reliability & Zero Downtime -->
+<div class="lg:col-span-5 rounded-lg bg-[#111925] p-space-lg border border-white/[0.07] hover:border-emerald-500/30 transition-all flex flex-col justify-between group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-mono-label text-mono-label text-slate-400 uppercase tracking-wider">RELIABILITY &amp; SCALABILITY</span>
+<span class="px-space-xs py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 font-body-sm text-body-sm font-medium">100% Availability</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-1">
+<span class="font-headline-lg text-headline-lg text-emerald-300 font-bold tracking-tight">Zero Downtime Deployments</span>
+</div>
+<p class="font-body-md text-body-md text-slate-300 leading-relaxed">
+        Executed seamless major Kubernetes version upgrades across live production clusters using Karpenter blue/green node groups and pod disruption budgets without interrupting daily business operations.
+      </p>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-space-md pt-space-sm border-t border-white/[0.06]">
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">AWS EKS</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Karpenter</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Zero Downtime Strategy</span>
+</div>
+</div>
+<!-- Card 4: Incident Recovery Speed -->
+<div class="lg:col-span-7 rounded-lg bg-[#111925] p-space-lg border border-white/[0.07] hover:border-emerald-500/30 transition-all flex flex-col justify-between group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-mono-label text-mono-label text-slate-400 uppercase tracking-wider">AI &amp; INCIDENT AUTOMATION</span>
+<span class="px-space-xs py-0.5 rounded bg-slate-700/30 border border-slate-600/40 text-slate-300 font-body-sm text-body-sm font-medium">80% Faster MTTR</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-1">
+<span class="font-headline-lg text-headline-lg text-emerald-300 font-bold tracking-tight">&lt; 2 Mins Incident Recovery</span>
+</div>
+<p class="font-body-md text-body-md text-slate-300 leading-relaxed">
+        Developed an autonomous AI-assisted incident copilot integrating AWS Bedrock and log indices via FastMCP. Enables on-call engineering teams to diagnose production crashloops and database locks within minutes.
+      </p>
+<div class="p-space-xs rounded bg-[#0d141e] border border-white/[0.05] flex items-center justify-between text-body-sm mt-1">
+<span class="text-slate-400">Impact: Automated Slack triage briefs for on-call engineers</span>
+<span class="text-emerald-300 font-medium">99.8% Analysis Accuracy</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-space-md pt-space-sm border-t border-white/[0.06]">
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">AWS Bedrock</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">OpenSearch</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Site Reliability Engineering</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Python</span>
+</div>
+</div>
+</div></section>
+<!-- ========================================== -->
+<!-- 02 // WORK EXPERIENCE & TIMELINE           -->
+<!-- ========================================== -->
+<section class="w-full px-margin-desktop py-space-xl max-w-7xl mx-auto flex flex-col gap-space-lg" id="experience"><div class="flex flex-col md:flex-row md:items-end justify-between border-b border-white/[0.07] pb-space-sm gap-space-xs">
+<div>
+<span class="font-mono-label text-mono-label text-emerald-400/90 font-semibold tracking-widest uppercase">02 // WORK EXPERIENCE &amp; LEADERSHIP</span>
+<h2 class="font-headline-lg text-headline-lg text-[#f1f5f9] tracking-tight font-semibold mt-1">
+      Production Systems Experience
+    </h2>
+</div>
+<span class="font-body-sm text-body-sm text-slate-400">Continuous Production Track Record</span>
+</div>
+<div class="relative pl-6 sm:pl-8 border-l border-white/[0.08] space-y-space-xl ml-2">
+<!-- Role 1: Dotpe -->
+<div class="relative group">
+<span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-emerald-400 border-4 border-[#0b111a] ring-2 ring-emerald-400/30"></span>
+<div class="rounded-lg bg-[#111925] p-space-lg border border-white/[0.07] hover:border-emerald-500/30 transition-colors flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<h3 class="font-headline-md text-headline-md text-[#f1f5f9] font-semibold">Dotpe Pvt. Ltd.</h3>
+<span class="px-space-xs py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 font-body-sm text-body-sm font-medium">Current Role</span>
+</div>
+<span class="font-body-md text-body-md text-emerald-300/90 font-medium">DevOps Engineer · Platform &amp; Cloud Infrastructure</span>
+</div>
+<span class="font-body-sm text-body-sm text-slate-400 px-space-sm py-1 rounded bg-[#182334] border border-white/[0.06]">
+          2024 — Present · Gurugram, India (Hybrid)
+        </span>
+</div>
+<ul class="space-y-space-xs text-slate-300 font-body-md text-body-md leading-relaxed list-disc list-inside">
+<li>Scaled and maintained resilient Kubernetes architecture across AWS multi-zone infrastructure serving millions of active e-commerce users with 99.99% uptime.</li>
+<li>Spearheaded GitOps CI/CD adoption using ArgoCD, reducing deployment lead times by 40% and eliminating manual staging misconfigurations.</li>
+<li>Engineered real-time observability pipelines with Prometheus &amp; Grafana, cutting redundant alert noise by 65% for the on-call engineering team.</li>
+<li>Integrated AI capabilities (AWS Bedrock) into platform monitoring workflows to accelerate incident root-cause analysis and recovery.</li>
+</ul>
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs border-t border-white/[0.06]">
+<span class="font-body-sm text-body-sm text-slate-400 font-medium">Core Tech:</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-emerald-300">AWS EKS</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">ArgoCD</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Helm</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Prometheus &amp; Grafana</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">AWS Bedrock</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Terraform</span>
+</div>
+</div>
+</div>
+<!-- Role 2: Short Hills Tech -->
+<div class="relative group">
+<span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#1e2a3c] border-4 border-[#0b111a] ring-1 ring-slate-600"></span>
+<div class="rounded-lg bg-[#111925] p-space-lg border border-white/[0.07] hover:border-emerald-500/30 transition-colors flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<h3 class="font-headline-md text-headline-md text-[#f1f5f9] font-semibold">Short Hills Tech</h3>
+<span class="px-space-xs py-0.5 rounded bg-[#182334] border border-white/[0.06] text-slate-400 font-body-sm text-body-sm">Completed</span>
+</div>
+<span class="font-body-md text-body-md text-slate-400">Software Engineer Trainee · Applied AI Systems</span>
+</div>
+<span class="font-body-sm text-body-sm text-slate-400 px-space-sm py-1 rounded bg-[#182334] border border-white/[0.06]">
+          2023 — 2024 · Noida, India
+        </span>
+</div>
+<ul class="space-y-space-xs text-slate-300 font-body-md text-body-md leading-relaxed list-disc list-inside">
+<li>Built internal AI-powered document search and retrieval pipelines using Python, LLM APIs, and vector chunking in ChromaDB.</li>
+<li>Containerized microservices via multi-stage Docker builds, decreasing cold-start deployment latencies by 38% on staging ECS clusters.</li>
+<li>Collaborated with cross-functional teams to streamline developer staging environments and built interactive analytical dashboards.</li>
+</ul>
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs border-t border-white/[0.06]">
+<span class="font-body-sm text-body-sm text-slate-400 font-medium">Core Tech:</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-emerald-300">Python</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Docker</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">OpenAI / Gemini APIs</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Vector Databases</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Streamlit</span>
+</div>
+</div>
+</div>
+</div></section>
+<!-- ========================================== -->
+<!-- 03 // FEATURED PROJECTS & SYSTEMS          -->
+<!-- ========================================== -->
+<section class="w-full px-margin-desktop py-space-xl max-w-7xl mx-auto flex flex-col gap-space-lg" id="projects"><div class="flex flex-col md:flex-row md:items-end justify-between border-b border-white/[0.07] pb-space-sm gap-space-xs">
+<div>
+<span class="font-mono-label text-mono-label text-emerald-400/90 font-semibold tracking-widest uppercase">03 // KEY PROJECTS &amp; PLATFORMS</span>
+<h2 class="font-headline-lg text-headline-lg text-[#f1f5f9] tracking-tight font-semibold mt-1">
+      Production Engineering Portfolio
+    </h2>
+</div>
+<span class="font-body-sm text-body-sm text-slate-400">Full-Stack Cloud &amp; AI Implementations</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter-desktop">
+<!-- Project 1: Trading Journal SaaS -->
+<div class="rounded-lg bg-[#111925] p-space-lg border border-white/[0.07] hover:border-emerald-500/30 transition-all flex flex-col justify-between group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-emerald-400 text-[20px]">query_stats</span>
+<span class="font-body-md text-body-md text-[#f1f5f9] font-semibold">Full-Stack SaaS Platform</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-emerald-500/10 text-emerald-300 font-body-sm text-body-sm font-medium border border-emerald-500/20">Live in Production</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-[#f1f5f9] font-semibold group-hover:text-emerald-300 transition-colors">
+          Trading Journal SaaS &amp; Observability Pipeline
+        </h3>
+<p class="font-body-md text-body-md text-slate-300 mt-2 leading-relaxed">
+          Full-featured financial tracking platform built with Node.js, MongoDB, and AWS serverless alerting with payment integration. Engineered with idempotent transaction processing to eliminate billing discrepancies under peak loads.
+        </p>
+</div>
+<div class="rounded bg-[#0d141e] p-space-sm border border-white/[0.05] space-y-2 text-body-sm">
+<div class="flex items-center justify-between">
+<span class="text-slate-400">Architecture Highlights:</span>
+<span class="text-[#f1f5f9] font-medium">CloudWatch → SNS → AWS Lambda</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1 border-t border-white/[0.05] text-body-sm">
+<div>
+<span class="text-slate-400">Service Uptime:</span>
+<span class="text-emerald-300 font-semibold ml-1">99.98%</span>
+</div>
+<div class="text-right">
+<span class="text-slate-400">Webhook Loss:</span>
+<span class="text-emerald-300 font-semibold ml-1">0.00%</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">React</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Node.js</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">MongoDB</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">AWS Lambda</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Razorpay API</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-md mt-space-md border-t border-white/[0.06]">
+<a class="inline-flex items-center gap-1 font-body-sm text-body-sm text-emerald-400 hover:text-emerald-300 font-medium" href="#">
+<span>Live Demo</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+<span class="text-slate-600">/</span>
+<a class="inline-flex items-center gap-1 font-body-sm text-body-sm text-slate-400 hover:text-slate-200" href="#">
+<span>Architecture Overview</span>
+</a>
+<span class="text-slate-600">/</span>
+<a class="inline-flex items-center gap-1 font-body-sm text-body-sm text-slate-400 hover:text-slate-200" href="https://github.com" rel="noopener" target="_blank">
+<span>GitHub Source</span>
+</a>
+</div>
+</div>
+<!-- Project 2: Agentic AI RCA Bot -->
+<div class="rounded-lg bg-[#111925] p-space-lg border border-white/[0.07] hover:border-emerald-500/30 transition-all flex flex-col justify-between group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-emerald-400 text-[20px]">smart_toy</span>
+<span class="font-body-md text-body-md text-[#f1f5f9] font-semibold">AI Platform Engineering</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-emerald-500/10 text-emerald-300 font-body-sm text-body-sm font-medium border border-emerald-500/20">MCP Integration</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-[#f1f5f9] font-semibold group-hover:text-emerald-300 transition-colors">
+          AI-Powered Incident Response Assistant
+        </h3>
+<p class="font-body-md text-body-md text-slate-300 mt-2 leading-relaxed">
+          Smart on-call assistant integrating LLM reasoning to diagnose cloud errors, inspect container logs, and deliver instant, actionable summaries directly to engineering Slack channels.
+        </p>
+</div>
+<div class="rounded bg-[#0d141e] p-space-sm border border-white/[0.05] space-y-2 text-body-sm">
+<div class="flex items-center justify-between">
+<span class="text-slate-400">Model &amp; Protocol:</span>
+<span class="text-[#f1f5f9] font-medium">Claude 3.5 Sonnet + OpenSearch FastMCP</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1 border-t border-white/[0.05] text-body-sm">
+<div>
+<span class="text-slate-400">Triage Speedup:</span>
+<span class="text-emerald-300 font-semibold ml-1">80% Less Time</span>
+</div>
+<div class="text-right">
+<span class="text-slate-400">Summary Accuracy:</span>
+<span class="text-emerald-300 font-semibold ml-1">98.4%</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">AWS Bedrock</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">FastMCP</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">OpenSearch</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Slack Webhooks</span>
+<span class="font-body-sm text-body-sm px-2 py-0.5 rounded bg-[#182334] text-slate-300">Python</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-md mt-space-md border-t border-white/[0.06]">
+<a class="inline-flex items-center gap-1 font-body-sm text-body-sm text-emerald-400 hover:text-emerald-300 font-medium" href="#">
+<span>Documentation</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+<span class="text-slate-600">/</span>
+<a class="inline-flex items-center gap-1 font-body-sm text-body-sm text-slate-400 hover:text-slate-200" href="#">
+<span>Workflow Diagram</span>
+</a>
+<span class="text-slate-600">/</span>
+<a class="inline-flex items-center gap-1 font-body-sm text-body-sm text-slate-400 hover:text-slate-200" href="https://github.com" rel="noopener" target="_blank">
+<span>GitHub Source</span>
+</a>
+</div>
+</div>
+</div></section>
+<!-- ========================================== -->
+<!-- 04 // INTERACTIVE TECH STACK RADAR         -->
+<!-- ========================================== -->
+<section class="w-full px-margin-desktop py-space-xl max-w-7xl mx-auto flex flex-col gap-space-lg" id="tech-stack"><div class="flex flex-col md:flex-row md:items-end justify-between border-b border-white/[0.07] pb-space-sm gap-space-xs">
+<div>
+<span class="font-mono-label text-mono-label text-emerald-400/90 font-semibold tracking-widest uppercase">04 // SKILLS &amp; TECHNICAL CAPABILITIES</span>
+<h2 class="font-headline-lg text-headline-lg text-[#f1f5f9] tracking-tight font-semibold mt-1">
+      Core Toolchain &amp; Engineering Skills
+    </h2>
+</div>
+<span class="font-body-sm text-body-sm text-slate-400">Organized by Professional Competency</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop">
+<!-- Domain 1: Cloud & Containers -->
+<div class="rounded-lg bg-[#111925] p-space-md border border-white/[0.07] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs border-b border-white/[0.06] mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-emerald-400 font-semibold">Cloud &amp; Infrastructure</span>
+<span class="material-symbols-outlined text-emerald-400 text-[18px]">cloud</span>
+</div>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-slate-300">
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">AWS (EKS, EC2, S3, IAM, VPC)</span><span class="text-emerald-300 text-[10px] font-semibold">Expert</span></li>
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">Kubernetes &amp; Helm</span><span class="text-emerald-300 text-[10px] font-semibold">Advanced</span></li>
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">Docker &amp; Containerization</span><span class="text-emerald-300 text-[10px] font-semibold">Advanced</span></li>
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">Karpenter Autoscaler</span><span class="text-emerald-300 text-[10px] font-semibold">Proficient</span></li>
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">Cloud Cost Optimization</span><span class="text-emerald-300 text-[10px] font-semibold">Proven ROI</span></li>
+</ul>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-white/[0.05] text-body-sm text-slate-400">
+      Focus: Multi-tenant resilient cloud architecture
+    </div>
+</div>
+<!-- Domain 2: CI/CD & Automation -->
+<div class="rounded-lg bg-[#111925] p-space-md border border-white/[0.07] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs border-b border-white/[0.06] mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-emerald-400 font-semibold">CI/CD &amp; GitOps</span>
+<span class="material-symbols-outlined text-emerald-400 text-[18px]">sync_alt</span>
+</div>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-slate-300">
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">ArgoCD GitOps Workflows</span><span class="text-emerald-300 text-[10px] font-semibold">Core</span></li>
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">GitHub Actions Pipelines</span><span class="text-emerald-300 text-[10px] font-semibold">Active</span></li>
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">Terraform IaC</span><span class="text-emerald-300 text-[10px] font-semibold">Declarative</span></li>
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">GitLab CI &amp; Jenkins</span><span class="text-slate-400 text-[10px]">Proficient</span></li>
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">Automated Release Cadence</span><span class="text-emerald-300 text-[10px] font-semibold">Practiced</span></li>
+</ul>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-white/[0.05] text-body-sm text-slate-400">
+      Focus: Automated, repeatable zero-touch deployments
+    </div>
+</div>
+<!-- Domain 3: Observability & Reliability -->
+<div class="rounded-lg bg-[#111925] p-space-md border border-white/[0.07] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs border-b border-white/[0.06] mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-slate-200 font-semibold">Observability &amp; Reliability</span>
+<span class="material-symbols-outlined text-slate-300 text-[18px]">monitoring</span>
+</div>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-slate-300">
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">Prometheus &amp; Alertmanager</span><span class="text-emerald-300 text-[10px] font-semibold">Advanced</span></li>
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">Grafana Dashboard Design</span><span class="text-emerald-300 text-[10px] font-semibold">Advanced</span></li>
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">OpenSearch &amp; Filebeat</span><span class="text-emerald-300 text-[10px] font-semibold">Centralized</span></li>
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">Apache Kafka Streams</span><span class="text-emerald-300 text-[10px] font-semibold">Streaming</span></li>
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">Incident Management (PagerDuty)</span><span class="text-emerald-300 text-[10px] font-semibold">SRE</span></li>
+</ul>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-white/[0.05] text-body-sm text-slate-400">
+      Focus: Proactive alerting &amp; sub-second anomaly detection
+    </div>
+</div>
+<!-- Domain 4: Software & Collaboration -->
+<div class="rounded-lg bg-[#111925] p-space-md border border-white/[0.07] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs border-b border-white/[0.06] mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-slate-200 font-semibold">Code &amp; Soft Skills</span>
+<span class="material-symbols-outlined text-slate-300 text-[18px]">code</span>
+</div>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-slate-300">
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">Python (Boto3, Automation)</span><span class="text-emerald-300 text-[10px] font-semibold">Proficient</span></li>
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">Bash &amp; Linux Internals</span><span class="text-emerald-300 text-[10px] font-semibold">Core</span></li>
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">Go &amp; Node.js Microservices</span><span class="text-slate-400 text-[10px]">Proficient</span></li>
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">Agile / Scrum &amp; Jira</span><span class="text-emerald-300 text-[10px] font-semibold">Practiced</span></li>
+<li class="flex items-center justify-between p-1.5 rounded bg-[#0d141e] border border-white/[0.03]"><span class="text-slate-200 font-medium">Cross-Team Collaboration</span><span class="text-emerald-300 text-[10px] font-semibold">Leadership</span></li>
+</ul>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-white/[0.05] text-body-sm text-slate-400">
+      Focus: High-velocity teamwork &amp; developer productivity
+    </div>
+</div>
+</div></section>
+<!-- ========================================== -->
+<!-- 05 // CERTIFICATIONS & CREDENTIALS         -->
+<!-- ========================================== -->
+<section class="w-full px-margin-desktop py-space-xl max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between border-b border-white/[0.07] pb-space-sm gap-space-xs">
+<div>
+<span class="font-mono-label text-mono-label text-emerald-400/90 font-semibold tracking-widest uppercase">05 // ACCREDITATION &amp; EDUCATION</span>
+<h2 class="font-headline-lg text-headline-lg text-[#f1f5f9] tracking-tight font-semibold mt-1">
+          Formal Credentials &amp; Specializations
+        </h2>
+</div>
+<span class="font-mono-label text-mono-label text-slate-400">Validated Cloud Engineering Knowledge</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+<!-- Credential 1 -->
+<div class="rounded-lg bg-[#111925] p-space-md border border-white/[0.07] hover:border-emerald-500/30 transition-colors flex flex-col justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-emerald-400 text-[22px]">verified</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-[#f1f5f9] font-semibold leading-tight">
+              AWS Certified Developer
+            </h4>
+<span class="font-mono-label text-mono-label text-emerald-300">Associate Level · AWS</span>
+<p class="font-body-sm text-body-sm text-slate-300 mt-1">
+              Cloud architecture, serverless orchestrations, IAM roles, and decoupled event architectures.
+            </p>
+</div>
+</div>
+<div class="pt-space-xs border-t border-white/[0.06] flex items-center justify-between font-mono-label text-mono-label text-slate-400">
+<span>AMAZON WEB SERVICES</span>
+<span class="text-emerald-400">VERIFIED ↗</span>
+</div>
+</div>
+<!-- Credential 2 -->
+<div class="rounded-lg bg-[#111925] p-space-md border border-white/[0.07] hover:border-emerald-500/30 transition-colors flex flex-col justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded bg-[#182334] border border-white/[0.06] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-emerald-400 text-[22px]">developer_mode</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-[#f1f5f9] font-semibold leading-tight">
+              Meta Back-End Developer
+            </h4>
+<span class="font-mono-label text-mono-label text-slate-300">Specialization · Meta</span>
+<p class="font-body-sm text-body-sm text-slate-300 mt-1">
+              Microservices architectures, relational database indexing, API rate limiting, and defensive design.
+            </p>
+</div>
+</div>
+<div class="pt-space-xs border-t border-white/[0.06] flex items-center justify-between font-mono-label text-mono-label text-slate-400">
+<span>COURSERA / META</span>
+<span class="text-emerald-400">VERIFIED ↗</span>
+</div>
+</div>
+<!-- Credential 3 -->
+<div class="rounded-lg bg-[#111925] p-space-md border border-white/[0.07] hover:border-emerald-500/30 transition-colors flex flex-col justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded bg-[#182334] border border-white/[0.06] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-slate-300 text-[22px]">school</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-[#f1f5f9] font-semibold leading-tight">
+              B.Tech in Computer Science (AI)
+            </h4>
+<span class="font-mono-label text-mono-label text-slate-400">G.L. Bajaj Inst. of Tech &amp; Mgmt</span>
+<p class="font-body-sm text-body-sm text-slate-300 mt-1">
+              Graduated with First Class with Distinction. Core focus on distributed operating systems and AI algorithms.
+            </p>
+</div>
+</div>
+<div class="pt-space-xs border-t border-white/[0.06] flex items-center justify-between font-mono-label text-mono-label text-slate-400">
+<span>AKTU UNIVERSITY</span>
+<span class="text-slate-300 font-medium">DISTINCTION</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 06 // TERMINAL GET IN TOUCH (CONTACT)      -->
+<!-- ========================================== -->
+<section class="w-full px-margin-desktop py-space-xl max-w-7xl mx-auto flex flex-col gap-space-lg mb-space-xl" id="contact"><div class="flex flex-col md:flex-row md:items-end justify-between border-b border-white/[0.07] pb-space-sm gap-space-xs">
+<div>
+<span class="font-mono-label text-mono-label text-emerald-400/90 font-semibold tracking-widest uppercase">06 // RECRUITER &amp; HIRING INQUIRIES</span>
+<h2 class="font-headline-lg text-headline-lg text-[#f1f5f9] tracking-tight font-semibold mt-1">
+      Let's Connect &amp; Discuss Opportunities
+    </h2>
+</div>
+<span class="font-body-sm text-body-sm text-slate-400">Direct Line to Mukul Jain</span>
+</div>
+<div class="rounded-lg bg-[#101724] border border-white/[0.08] shadow-lg p-space-lg flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<h3 class="font-headline-md text-headline-md text-[#f1f5f9] font-semibold">Open to High-Impact Platform &amp; SRE Roles</h3>
+<p class="font-body-lg text-body-lg text-slate-300 leading-relaxed">
+      I am actively exploring Platform Engineering, DevOps, and Site Reliability roles. Whether you have an open team position, a confidential search, or want to discuss engineering strategy, I would love to hear from you.
+    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-md rounded-lg bg-[#141e2e] border border-white/[0.05] flex flex-col gap-1">
+<span class="font-mono-label text-[10px] text-slate-400 uppercase tracking-wider">Direct Email</span>
+<a class="font-body-md text-body-md text-emerald-300 hover:text-emerald-200 hover:underline font-medium" href="mailto:mukulj2018@gmail.com">
+        mukulj2018@gmail.com
+      </a>
+<span class="text-body-sm text-slate-400 mt-1 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        Response time: within 24 hours
+      </span>
+</div>
+<div class="p-space-md rounded-lg bg-[#141e2e] border border-white/[0.05] flex flex-col gap-1">
+<span class="font-mono-label text-[10px] text-slate-400 uppercase tracking-wider">Location &amp; Work Model</span>
+<span class="font-body-md text-body-md text-[#f1f5f9] font-medium">New Delhi / NCR, India</span>
+<span class="text-body-sm text-slate-400 mt-1">Open to Remote, Hybrid, &amp; Relocation</span>
+</div>
+<div class="p-space-md rounded-lg bg-[#141e2e] border border-white/[0.05] flex flex-col gap-1">
+<span class="font-mono-label text-[10px] text-slate-400 uppercase tracking-wider">Current Availability</span>
+<span class="font-body-md text-body-md text-emerald-300 font-medium">Available Immediately / Notice Negotiable</span>
+<span class="text-body-sm text-slate-400 mt-1">Full-Time Roles &amp; Select Advisory</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-sm border-t border-white/[0.06]">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-emerald-500/90 text-emerald-950 font-body-md text-body-md font-semibold hover:bg-emerald-400 transition-all shadow-sm" href="mailto:mukulj2018@gmail.com?subject=Platform%20Engineering%20Role%20Discussion">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+<span>Send an Email</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-[#141d2b] border border-white/[0.08] hover:border-emerald-500/40 text-slate-200 hover:text-white font-body-md text-body-md transition-colors" href="mailto:mukulj2018@gmail.com?subject=Schedule%20Introductory%20Call">
+<span class="material-symbols-outlined text-[18px] text-emerald-400">calendar_month</span>
+<span>Schedule a Quick Call</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-[#141d2b] border border-white/[0.06] hover:border-slate-500 text-slate-300 hover:text-[#f1f5f9] font-body-sm text-body-sm transition-colors ml-auto" href="https://linkedin.com" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+<span>View LinkedIn Profile</span>
+</a>
+</div>
+</div></section>
+<!-- Interactive Terminal & State JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Smooth anchor scrolling behavior
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</div></main><footer class="w-full bg-[#080d14] border-t border-white/[0.06]"><div class="w-full px-margin-desktop py-space-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg"><div class="flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-emerald-400"></div><span class="font-mono-metric-md text-mono-metric-md text-[#f1f5f9] font-semibold">Mukul Jain</span><span class="font-mono-label text-mono-label px-space-xs py-0.5 rounded bg-[#141e2e] text-slate-400 border border-white/[0.05]">v4.12-prod</span></div><p class="font-body-sm text-body-sm text-slate-400">Platform &amp; DevOps Architect · New Delhi, India · <a class="text-emerald-400 hover:text-emerald-300 hover:underline" href="mailto:mukulj2018@gmail.com">mukulj2018@gmail.com</a></p></div><div class="flex flex-col md:items-end gap-space-xs"><div class="flex items-center gap-space-md"><a class="font-mono-label text-mono-label text-slate-400 hover:text-emerald-300 transition-colors" href="https://github.com" rel="noopener" target="_blank">GITHUB</a><span class="text-slate-600">/</span><a class="font-mono-label text-mono-label text-slate-400 hover:text-emerald-300 transition-colors" href="https://linkedin.com" rel="noopener" target="_blank">LINKEDIN</a><span class="text-slate-600">/</span><a class="font-mono-label text-mono-label text-slate-400 hover:text-emerald-300 transition-colors" href="https://twitter.com" rel="noopener" target="_blank">X_TWITTER</a><span class="text-slate-600">/</span><a class="font-mono-label text-mono-label text-slate-400 hover:text-emerald-300 transition-colors" href="mailto:mukulj2018@gmail.com">EMAIL</a></div><p class="font-mono-label text-mono-label text-slate-500">© 2026 Mukul Jain. Cloud Platform &amp; DevOps Engineering Portfolio</p></div></div></footer></body></html>
